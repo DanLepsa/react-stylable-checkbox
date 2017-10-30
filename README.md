@@ -1,9 +1,10 @@
 # react-stylable-checkbox
-> Stylable checkbox component
+> Stylable checkbox component [![Build Status](https://travis-ci.org/DanLepsa/react-stylable-checkbox.svg?branch=master)](https://travis-ci.org/DanLepsa/react-stylable-checkbox)
 
-## Install
-  npm install
-  npm start
+## Installation
+  ``
+  npm install react-stylable-checkbox
+  ``
 ## Usage
 
 import CustomCheckbox from './CustomCheckbox';
