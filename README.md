@@ -7,7 +7,7 @@
   ``
 ## Usage
 
-import CustomCheckbox from './CustomCheckbox';
+const CustomCheckbox = require('react-stylable-checkbox');
 
 <CustomCheckbox
   checked={true}
