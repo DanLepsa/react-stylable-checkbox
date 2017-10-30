@@ -1,6 +1,9 @@
 # react-stylable-checkbox
 > Stylable checkbox component
 
+## Install
+  npm install
+  npm start
 ## Usage
 
 import CustomCheckbox from './CustomCheckbox';
