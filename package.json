@@ -1,11 +1,10 @@
 {
   "name": "react-stylable-checkbox",
-  "version": "2.0.1",
+  "version": "1.0.0",
   "description": "custom react checkbox",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack -d",
-    "start": "node dev-server.js"
+    "build": "webpack -d"
   },
   "keywords": [
     "react-stylable-checkbox",
