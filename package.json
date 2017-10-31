@@ -1,6 +1,6 @@
 {
   "name": "react-stylable-checkbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "custom react checkbox",
   "main": "dist/index.js",
   "scripts": {
