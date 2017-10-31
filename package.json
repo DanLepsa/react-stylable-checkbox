@@ -21,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.7",
+    "url-loader": "^0.6.2",
     "valid-web-color": "^1.0.1"
   },
   "devDependencies": {
@@ -34,7 +35,6 @@
     "npm": "^5.5.1",
     "react": "^15.1.0",
     "react-dom": "^15.0.0",
-    "transfer-webpack-plugin": "^0.1.4",
-    "url-loader": "^0.6.2",
+    "transfer-webpack-plugin": "^0.1.4"
   }
 }
