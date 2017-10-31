@@ -28,4 +28,4 @@ import CustomCheckbox from 'react-stylable-checkbox';
 - **disabled** (boolean, default: false) - disabled state for the checkbox; once disabled the onClick callback does not fire anymore
 
 ### Licence
-The code is open-source and available under the MIT Licence. More details in the LICENCE.md file.
+The code is open-source and available under the MIT Licence.

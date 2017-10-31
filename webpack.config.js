@@ -7,6 +7,8 @@ module.exports = {
     },
 
     output: {
+        library: 'ReactStylableCheckbox',
+        libraryTarget: 'umd',
         path: path.join(__dirname, 'dist'),
         filename: 'index.js'
     },

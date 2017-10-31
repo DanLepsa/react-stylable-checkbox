@@ -1,7 +1,13 @@
-import React, {Component, PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import validWebColor from 'valid-web-color';
 
-class CustomCheckbox extends Component {
+const checkWhite = require('./check_white.png');
+const checkBlack = require('./check_black.png');
+const xBlack = require('./x_black.png');
+const xWhite = require('./x_white.png');
+
+class ReactStylableCheckbox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,8 +29,23 @@ class CustomCheckbox extends Component {
   }
 
   getSelectedSign(sign){
-    ['check_white','check_black','x_white','x_black'].indexOf(sign) != -1 ? "" : sign='check_white';
-    return sign;
+    switch(sign){
+      case 'check_white' :
+        return checkWhite;
+        break;
+      case 'check_black' :
+        return checkBlack;
+        break;
+      case 'x_white' :
+        return xWhite;
+        break;
+      case 'x_black' :
+        return xBlack;
+        break;
+      default :
+        return checkWhite;
+        break;
+    }
   }
 
   validSize(sizeString){
@@ -41,8 +62,8 @@ class CustomCheckbox extends Component {
   render(){
     let selectedColor = validWebColor(this.props.color) ? this.props.color : null;
     let selectedSize = this.validSize(this.props.size) ? this.validSize(this.props.size) : null;
-    let selectedSign = this.getSelectedSign(this.props.sign);
-    let imageSrc = require('./'+selectedSign+'.png');
+    let imageSrc = this.getSelectedSign(this.props.sign);
+
     const css = {
       imageBody:{
         width:'70%',
@@ -86,15 +107,15 @@ class CustomCheckbox extends Component {
         opacity:'0.5',
         borderRadius: selectedSize ? selectedSize/4+'px' : '5px',
         position:'absolute',
-        top:'0',
-        right:'0'
+        top:'0px',
+        right:'0px'
       }
     };
 
     let props = this.props;
 
     return(
-      <div style={this.state.checked ? css.checkboxBody : this.props.isHollow ? css.checkboxBodyDef : css.checkboxBody} onClick={this.props.disabled ? "" : this.onToggleClick}>
+      <div className="" style={this.state.checked ? css.checkboxBody : this.props.isHollow ? css.checkboxBodyDef : css.checkboxBody} onClick={this.props.disabled ? "" : this.onToggleClick}>
         <div style={css.imageBody}>
           {this.state.checked ?
             <img style={{width:'100%',height:'100%'}} src={imageSrc} />
@@ -108,7 +129,7 @@ class CustomCheckbox extends Component {
   }
 }
 
-CustomCheckbox.propTypes = {
+ReactStylableCheckbox.propTypes = {
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
     isHollow: PropTypes.bool,
@@ -118,4 +139,4 @@ CustomCheckbox.propTypes = {
     onChange: PropTypes.func
 }
 
-export default CustomCheckbox;
+export default ReactStylableCheckbox;
