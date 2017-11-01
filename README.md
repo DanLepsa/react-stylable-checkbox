@@ -29,7 +29,7 @@ import CustomCheckbox from 'react-stylable-checkbox';
 - **color** (string) - the background color of the checkbox (also supports hex or rgb)
 - **onClick** (function) - requires callback
 - **size** (string) - the size of the checkbox in px
-- **isHollow** (boolean) - the look of the checkbox when unchecked ( isHallow={false} by default)
+- **isHollow** (boolean) - the look of the checkbox when unchecked ( isHollow={false} by default)
 - **disabled** (boolean, default: false) - disabled state for the checkbox; once disabled the onClick callback does not fire anymore
 
 ### Licence
